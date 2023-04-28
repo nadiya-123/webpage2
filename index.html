@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Anas Siddique Construction</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<style>
+  @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+html {
+
+scroll-behavior: smooth;
+}
+a {
+text-decoration: none;
+}
+.section-title {
+font-size: 4rem;
+font-weight: 300;
+color: black;
+margin-bottom: 10px;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+text-align: center;
+}
+.section-title span {
+color: crimson;
+}
+.container {
+
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#header {
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100vw;
+height: auto;
+}
+#header .header {
+min-height: 8vh;
+background-color: rgba(11, 10, 10, 0.884);
+transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+height: 100%;
+max-width: 1300px;
+padding: 0 10px;
+}
+#header .nav-list ul {
+list-style: none;
+position: absolute;
+background-color: rgb(31, 30, 30);
+width: 100vw;
+height: 100vh;
+left: 100%;
+top: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 1;
+overflow-x: hidden;
+transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+left: 0%;
+}
+#header .nav-list ul a {
+font-size: 2.5rem;
+font-weight: 500;
+letter-spacing: 0.2rem;
+text-decoration: none;
+color: white;
+text-transform: uppercase;
+padding: 20px;
+display: block;
+}
+#header .nav-list ul a::after {
+content: attr(data-after);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0);
+color: rgba(12, 12, 18, 0.021);
+font-size: 13rem;
+letter-spacing: 50px;
+z-index: -1;
+transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+transform: translate(-50%, -50%) scale(1);
+letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+color: crimson;
+}
+
+#header .hamburger {
+height: 60px;
+width: 60px;
+display: inline-block;
+border: 3px solid white;
+border-radius: 50%;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 100;
+cursor: pointer;
+transform: scale(0.8);
+margin-right: 20px;
+}
+#header .hamburger:after {
+position: absolute;
+content: '';
+height: 100%;
+width: 100%;
+border-radius: 50%;
+border: 3px solid white;
+animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+height: 2px;
+width: 30px;
+position: relative;
+background-color: white;
+z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+content: '';
+position: absolute;
+height: 100%;
+width: 100%;
+left: 0;
+background-color: white;
+transition: 0.3s ease;
+transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+top: 8px;
+}
+#header .hamburger .bar::before {
+bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+bottom: 0;
+}
+#header .hamburger.active .bar::after {
+top: 0;
+}
+/* End Header section */
+@keyframes hamburger_puls {
+0% {
+opacity: 1;
+transform: scale(1);
+}
+100% {
+opacity: 0;
+transform: scale(1.4);
+}
+}
+
+@media only screen and (min-width: 1200px) {
+/* header */
+#header .hamburger {
+display: none;
+}
+#header .nav-list ul {
+position: initial;
+display: block;
+height: auto;
+width: fit-content;
+background-color: transparent;
+}
+#header .nav-list ul li {
+display: inline-block;
+    
+}
+#header .nav-list ul li a {
+font-size: 1.8rem;
+    
+}
+
+#header .nav-list ul a:after {
+display: none;
+
+}
+}
+    
+			.showcase
+{
+  position: fixed;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+
+.showcase video
+{
+  position:fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right:0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
+  object-fit:cover;
+  z-index: -1;
+}
+
+.overlay
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right:0;
+  width: 100vw;
+  height: 100vh;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: fixed;
+  z-index: 10;
+}
+
+.text h2
+{
+  font-size: 3em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  margin:10px 0;
+  text-transform: uppercase;
+}
+.text h5
+{
+  font-size: 1.5em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+  font:bolder;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+  color:crimson;
+  font-weight:200;
+}
+@media only screen and (min-width: 1200px){
+    .showcase .text h2{
+        font-size: 4rem;
+
+    }
+    .showcase .text h3{
+        font-size:3rem;
+    }
+}
+		
+		
+
+</style>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <script src="js1.js" async defer></script>
+    <section id="header">
+        <div class="header container">
+          <div class="nav-bar">
+            <div class="brand">
+                <a href="#hero">
+                  <h1></h1>
+                </a>
+              </div>
+            <div class="nav-list">
+              <div class="hamburger">
+                <div class="bar"></div>
+              </div>
+              <ul>
+                <li><a href="index.html" data-after="Home">HOME</a></li>
+                <li><a href="about.html" data-after="About us">ABOUT US</a></li>
+                <li><a href="projects.html" data-after="Projects">PROJECTS</a></li>
+                <li><a href="specialization.html" data-after="Specialization">SPECIALIZATION</a></li>
+                <li><a href="contact.html" data-after="Contact">CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <!-- End Header -->
+          <section class="showcase">
+          
+            <video src="explore.mp4" muted loop autoplay></video>
+            <div class="overlay"></div>
+            <div class="text">
+              <h2>Anas Siddique</h2> 
+              <h3>Construction LLc</h3>
+              <h3>Dubai</h3>
+              <h5>You Desire Quality,We Desire Perfection.</h5>
+              <a href="why.html">WHY US</a>
+            </div>
+        </section>
+		 
+    <footer class="text-gray-600 bg-slate-300 body-font">
+      <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            
+            <span class="ml-3 text-xl">Anas Siddique Construction LLc</span>
+          </a>
+          <p class="mt-2 text-sm text-gray-500">carries wide expertise in construction of residential and commercial buildings, backed by the experience of its founders.</p>
+        </div>
+        <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">RELATED LINKS</h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="text-gray-600 hover:text-gray-800" href="index.html">HOME</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800" href="about.html">ABOUT US</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800" href="projects.html">PROJECTS</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800" href="specialization.html">SPECIALIZATION</a>
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">BROCHURE</h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Click the below link to</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">download the company</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">brochure</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800"href="static/brochure.pdf " download="file"><b>Download</b></a>
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CONTACT INFO</h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Sultan Investments Group Buildings</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Flat No 301/1</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Port Saeed Deira,Dubai</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Ph no:056-406 5753,052-288 2569</a>
+              </li>
+            </nav>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+            <nav class="list-none mb-10">
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">First Link</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+              </li>
+              <li>
+                <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+              </li>
+            </nav>
+          </div>
+          <hr>
+          <p class="text-gray-500 text-sm text-center sm:text-left">© 2023 Anas Siddique Construction LLc,All Rights Reserved.
+              
+            </p>
+            <hr>
+        </div>
+      </div>
+      
+    </footer>
+  </body>
+  </html>
+
+
+        
+    
